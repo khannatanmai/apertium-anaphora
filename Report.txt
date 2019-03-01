@@ -1,0 +1,4 @@
+Byte by Byte Reading:
+Time Taken:
+0.961277961730957
+Total Token Count: 20434
