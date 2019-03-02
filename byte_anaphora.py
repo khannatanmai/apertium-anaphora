@@ -55,7 +55,7 @@ with open("input.txt", "rb") as f:
 
                         #print(last_noun)
 
-                #print(output_stream) #Uncomment to see output
+                print(output_stream) #Uncomment to see output
 
                 input_stream = ''
 
