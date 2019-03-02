@@ -1,0 +1,4 @@
+Total Pronouns: 34
+
+Default Male(correct): 14
+Last seen noun(correct): 13
