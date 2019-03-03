@@ -1,0 +1,39 @@
+Reading file in Chunks of Size 1024 bytes:
+
+Time Taken:
+0.38858890533447266
+Total Token Count:20434
+
+Reading file in Chunks of Size 512 bytes:
+
+Time Taken:
+0.40150976181030273
+Total Token Count:20434
+
+Reading file in Chunks of Size 256 bytes:
+
+Time Taken:
+0.4217069149017334
+Total Token Count:20434
+
+Reading file in Chunks of Size 128 bytes:
+
+Time Taken:
+0.4312467575073242
+Total Token Count:20434
+
+Reading file in Chunks of Size 1 byte: [This is essentially byte by byte but as chunks and hence is very slow]
+
+Time Taken:
+6.571893930435181
+Total Token Count:20434
+
+Reading file Byte by Byte:
+
+Time Taken:
+0.8612806797027588
+Total Token Count:20434
+
+
+Note: I used vimdiff on all the outputs (present in repo), and all are exactly same.
+Note: Chunk size can be changed in code, if needed can be taken as argument
