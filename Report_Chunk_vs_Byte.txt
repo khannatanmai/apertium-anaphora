@@ -1,39 +1,42 @@
+Reading file Byte by Byte:
+
+Time Taken:
+0.9855251312255859
+
 Reading file in Chunks of Size 1024 bytes:
 
 Time Taken:
-0.38858890533447266
-Total Token Count:20434
+0.4367821216583252
 
 Reading file in Chunks of Size 512 bytes:
 
 Time Taken:
-0.40150976181030273
-Total Token Count:20434
+0.4537472724914551
 
 Reading file in Chunks of Size 256 bytes:
 
 Time Taken:
-0.4217069149017334
-Total Token Count:20434
+0.4718914031982422
 
 Reading file in Chunks of Size 128 bytes:
 
 Time Taken:
-0.4312467575073242
-Total Token Count:20434
+0.5409409999847412
+
+Reading file in Chunks of Size 32 bytes:
+
+Time Taken:
+0.7027938365936279
 
 Reading file in Chunks of Size 1 byte: [This is essentially byte by byte but as chunks and hence is very slow]
 
 Time Taken:
-6.571893930435181
+7.438972234725952
 Total Token Count:20434
 
-Reading file Byte by Byte:
-
-Time Taken:
-0.8612806797027588
-Total Token Count:20434
+Analysis:
+1. Even with small chunks of size 128 bytes, the code performs much better.
+2. As we increase the chunk size the execution time gets faster.
 
 
-Note: I used vimdiff on all the outputs (present in repo), and all are exactly same.
-Note: Chunk size can be changed in code, if needed can be taken as argument
+Note: I used diff on all the outputs (present in repo), and all are exactly same.

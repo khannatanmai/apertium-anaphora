@@ -4,9 +4,27 @@ import time
 
 start = time.time()
 
+def is_intstring(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
+
+csize = 1024
+
+if len(sys.argv) < 2:
+    print("Using Default Chunk Size = 1024", file=sys.stderr)
+else:
+    if not is_intstring(sys.argv[1]):
+        print("Chunk size must be an integer! Exit.", file=sys.stderr)
+        sys.exit(1)
+    else:
+        csize = int(sys.argv[1])
+
 count = 0
 
-def read_in_chunks(file_object, chunk_size=1024):
+def read_in_chunks(file_object, chunk_size):
     """Lazy function (generator) to read a file piece by piece.
     Default chunk size: 1k."""
     while True:
@@ -18,11 +36,10 @@ def read_in_chunks(file_object, chunk_size=1024):
 add_to_next_chunk = ''
 
 with sys.stdin as f: #f = sys.stdin
-    for piece in read_in_chunks(f):
+    last_noun = ''
+    for piece in read_in_chunks(f, csize):
 
         piece = add_to_next_chunk + piece #Adding cut info from last chunk
-
-        last_noun = ''
 
         i = len(piece) - 1
 
