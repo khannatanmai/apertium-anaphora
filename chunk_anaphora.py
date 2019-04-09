@@ -4,7 +4,7 @@ import time
 
 start = time.time()
 
-def is_intstring(s):
+def is_intstring(s): #Evaluating argument taken from Command Line
     try:
         int(s)
         return True
@@ -20,7 +20,7 @@ else:
         print("Chunk size must be an integer! Exit.", file=sys.stderr)
         sys.exit(1)
     else:
-        csize = int(sys.argv[1])
+        csize = int(sys.argv[1]) #Take Chunk Size from Command Line
 
 count = 0
 
@@ -71,16 +71,11 @@ with sys.stdin as f: #f = sys.stdin
 
             output_stream += '$ '
 
-        sys.stdout.write(output_stream) #Uncomment to see output
-            #print(last_noun)
-
+        sys.stdout.write(output_stream)
 
 end = time.time()
-#print("Time Taken:")
-#print(end - start)
 
 print("Time Taken:", file=sys.stderr)
 print(end - start, file=sys.stderr)
 
-#print("Total Token Count" + str(count))
 print("Total Token Count:" + str(count), file=sys.stderr)

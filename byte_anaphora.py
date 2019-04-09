@@ -25,17 +25,13 @@ with sys.stdin as f:
             flag = 0
             count += 1
 
-            #print(str(input_stream))
-
             lexical_units = parse(input_stream)
             output_stream = ''
 
             for lexical_unit in lexical_units: #Now this should be only one lexical unit -- can be changed
                 output_stream += '^' + str(lexical_unit) + '/'
-                #print(lexical_unit)
 
                 if(len(lexical_unit.readings[0][0][1]) > 0):
-                	#print(lexical_unit.readings[0][0][1][0])
 
                 	if(lexical_unit.readings[0][0][1][0] == 'n'):
                 		last_noun = str(lexical_unit)
@@ -48,9 +44,6 @@ with sys.stdin as f:
 
                 output_stream += '$ '
 
-                #print(last_noun)
-
-            #print(output_stream) #Uncomment to see output
             sys.stdout.write(output_stream) #Uncomment to see output
 
             input_stream = ''
@@ -59,12 +52,9 @@ with sys.stdin as f:
 
 
 end = time.time()
-#print("Time Taken:")
-#print(end - start)
 
 print("Time Taken:", file=sys.stderr)
 print(end - start, file=sys.stderr)
 
-#print("Total Token Count" + str(count))
 print("Total Token Count:" + str(count), file=sys.stderr)
  
