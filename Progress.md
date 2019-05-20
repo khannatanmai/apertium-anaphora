@@ -4,18 +4,21 @@
 
 * Read the Documentation fully
 * Went through code for apertium core (pretransfer, transfer, tagger, etc.)
+* Flowchart of the proposed system
+
+== Ongoing Work ==
+* Understand the Apertium pipeline fully
+* Modify and Understand individual files
+* Get familiar with the files that I need to modify
+* Write Pseudocode for identifying Salience Factors
+* '''Study the EuroParl corpus''' and see which anaphors the method will be able to resolve on paper
+* Explore Constraint Grammar and use it if it proves to be beneficial
 
 == Work Plan ==
 
 '''Community Bonding Period''' (May 6 - May 27)
-* Understand the Apertium pipeline fully
-* Modify and Understand individual files
-* Get familiar with the files that I need to modify
+
 * Formalise the problem, limit the scope of anaphora resolution (To Anaphora needed for MT)
-* Flowchart of the proposed system
-* Write Pseudocode for identifying Salience Factors
-* '''Study the EuroParl corpus''' and see which anaphors the method will be able to resolve on paper
-* Explore Constraint Grammar and use it if it proves to be beneficial
 
 '''Week 1''' (May 27)
 * Automatic Annotation of anaphora for evaluation (EuroParl Corpus)
