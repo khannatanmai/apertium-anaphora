@@ -1,3 +1,7 @@
+  <def-cat n="det_pos"><!-- [[anaphora]] -->
+      <cat-item tags="det.pos.*"/>
+    </def-cat>
+    
   <!--*************************************** ANAPHORA ******************************************** -->
 
     <rule comment="testing anaphora">
