@@ -8,6 +8,7 @@
   </section-def-cats>
 
   <section-def-attrs>
+
     <def-attr n="gen">
       <attr-item tags="m"/>
       <attr-item tags="f"/>
@@ -34,20 +35,23 @@
           <when>
             <test><equal><clip pos="1" side="ref" part="nbr"/><lit-tag v="pl"/></equal></test>
             <let><clip pos="1" side="tl" part="lem"/><lit v="their"/></let>
+            <let><clip pos="1" side="tl" part="nbr"/><lit-tag v="pl"/></let>
           </when>
           <when> <!-- Should also check for animacy: el cotxe ... el seu ... → the car ... its ...  -->
             <test><equal><clip pos="1" side="ref" part="gen"/><lit-tag v="m"/></equal></test>
             <let><clip pos="1" side="tl" part="lem"/><lit v="his"/></let>
+            <let><clip pos="1" side="tl" part="gen"/><lit-tag v="m"/></let>
           </when>
           <when> <!-- Should also check for animacy: la máquina ... el seu ... → the machine ... its ... -->
             <test><equal><clip pos="1" side="ref" part="gen"/><lit-tag v="f"/></equal></test>
             <let><clip pos="1" side="tl" part="lem"/><lit v="her"/></let>
+            <let><clip pos="1" side="tl" part="gen"/><lit-tag v="f"/></let>
           </when>
         </choose>
         <out>
-          <chunk name="blah">
+          <chunk name="ref">
             <tags>
-              <tag><lit-tag v="blah"/></tag>
+              <tag><lit-tag v="ref"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
