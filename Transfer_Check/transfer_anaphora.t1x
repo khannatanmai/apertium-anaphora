@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- nxml -*- -->
+<transfer default="chunk">
+
+  <section-def-cats>  
+    <def-cat n="det_pos"><!-- [[anaphora]] -->
+      <cat-item tags="det.pos.*"/>
+    </def-cat>
+  </section-def-cats>
+
+  <section-def-attrs>
+    <def-attr n="gen">
+      <attr-item tags="m"/>
+      <attr-item tags="f"/>
+      <attr-item tags="mf"/>
+      <attr-item tags="nt"/>
+    </def-attr>
+
+    <def-attr n="nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="sp"/>
+      <attr-item tags="ND"/>
+    </def-attr>
+  </section-def-attrs>
+
+  <!--*************************************** ANAPHORA ******************************************** -->
+  <section-rules>
+    <rule comment="testing anaphora">
+      <pattern>
+        <pattern-item n="det_pos"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="ref" part="nbr"/><lit-tag v="pl"/></equal></test>
+            <let><clip pos="1" side="tl" part="lem"/><lit v="their"/></let>
+          </when>
+          <when> <!-- Should also check for animacy: el cotxe ... el seu ... → the car ... its ...  -->
+            <test><equal><clip pos="1" side="ref" part="gen"/><lit-tag v="m"/></equal></test>
+            <let><clip pos="1" side="tl" part="lem"/><lit v="his"/></let>
+          </when>
+          <when> <!-- Should also check for animacy: la máquina ... el seu ... → the machine ... its ... -->
+            <test><equal><clip pos="1" side="ref" part="gen"/><lit-tag v="f"/></equal></test>
+            <let><clip pos="1" side="tl" part="lem"/><lit v="her"/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk name="blah">
+            <tags>
+              <tag><lit-tag v="blah"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+  </section-rules>
+</transfer>

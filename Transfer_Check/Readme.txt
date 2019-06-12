@@ -11,4 +11,4 @@ Anaphora Command:
 python3 anaphora/chunk_anaphora.py < output_biltrans.txt > output_anaphora.txt
 
 Post Anaphora Command:
-apertium-transfer -b apertium-eng-spa.spa-eng.t1x spa-eng.t1x.bin < output_anaphora.txt | apertium-interchunk apertium-eng-spa.spa-eng.t2x spa-eng.t2x.bin | apertium-postchunk apertium-eng-spa.spa-eng.t3x spa-eng.t3x.bin | lt-proc -g spa-eng.autogen.bin | lt-proc -p spa-eng.autopgen.bin
+apertium-transfer -b apertium-eng-spa.spa-eng.t1x spa-eng.t1x.bin < ideal_output_anaphora.txt | apertium-interchunk apertium-eng-spa.spa-eng.t2x spa-eng.t2x.bin | apertium-postchunk apertium-eng-spa.spa-eng.t3x spa-eng.t3x.bin | lt-proc -g spa-eng.autogen.bin | lt-proc -p spa-eng.autopgen.bin
