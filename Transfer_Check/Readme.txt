@@ -12,3 +12,8 @@ python3 anaphora/chunk_anaphora.py < output_biltrans.txt > output_anaphora.txt
 
 Post Anaphora Command:
 apertium-transfer -b apertium-eng-spa.spa-eng.t1x spa-eng.t1x.bin < ideal_output_anaphora.txt | apertium-interchunk apertium-eng-spa.spa-eng.t2x spa-eng.t2x.bin | apertium-postchunk apertium-eng-spa.spa-eng.t3x spa-eng.t3x.bin | lt-proc -g spa-eng.autogen.bin | lt-proc -p spa-eng.autopgen.bin
+
+Post Transfer Rules Output:
+Tanmais-MacBook-Pro:apertium-eng-spa khannatanmai$ apertium-preprocess-transfer transfer_anaphora.t1x transfer_anaphora.t1x.bin
+Tanmais-MacBook-Pro:apertium-eng-spa khannatanmai$ apertium-transfer -b transfer_anaphora.t1x transfer_anaphora.t1x.bin < ideal_output_anaphora.txt
+^default<default>{^The<det><def><m><pl>$}$ ^default<default>{^group<n><pl>$}$ ^default<default>{^of<pr>$}$ ^default<default>{^the<det><def><m><sg>$}$ ^default<default>{^Parliament<n><sg>$}$ ^default<default>{^have<vbhaver><pri><p3><pl>$}$ ^default<default>{^show<vblex><pp><m><sg>$}$ ^default<default>{^this<det><dem><m><sg>$}$ ^default<default>{^Tuesday<n><ND>$}$ ^ref<ref>{^their<det><pos><m><pl>$}$ ^default<default>{^support<n><sg>$}$ ^default<default>{^at<pr>$}$ ^default<default>{^the<det><def><m><sg>$}$ ^unknown<unknown>{^*batle$}$ ^default<default>{^of<pr>$}$ ^unknown<unknown>{^*Alaró$}$ ^default<default>{^.<sent>$}$

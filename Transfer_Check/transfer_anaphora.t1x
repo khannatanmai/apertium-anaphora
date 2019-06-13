@@ -24,14 +24,9 @@
     </def-attr>
   </section-def-attrs>
 
-  <!--*************************************** ANAPHORA ******************************************** -->
-  <section-rules>
-    <rule comment="testing anaphora">
-      <pattern>
-        <pattern-item n="det_pos"/>
-      </pattern>
-      <action>
-        <choose>
+  <section-def-macros>
+    <def-macro n="ref" npar="1">
+      <choose>
           <when>
             <test><equal><clip pos="1" side="ref" part="nbr"/><lit-tag v="pl"/></equal></test>
             <let><clip pos="1" side="tl" part="lem"/><lit v="their"/></let>
@@ -48,6 +43,18 @@
             <let><clip pos="1" side="tl" part="gen"/><lit-tag v="f"/></let>
           </when>
         </choose>
+    </def-macro>
+  </section-def-macros>
+
+  <section-rules>
+    <rule comment="testing anaphora">
+      <pattern>
+        <pattern-item n="det_pos"/>
+      </pattern>
+      <action>
+        <call-macro n="ref">
+          <with-param pos="1"/>
+        </call-macro> 
         <out>
           <chunk name="ref">
             <tags>
