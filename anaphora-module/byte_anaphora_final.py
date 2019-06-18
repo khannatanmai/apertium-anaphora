@@ -35,7 +35,7 @@ with sys.stdin as f:
 
                         if(lexical_unit.readings[0][0][1][0] == 'n'):
                             last_noun = str(lexical_unit)
-                            last_noun = last_noun.split('/')[-1] #Taking only the last option (the one in English)
+                            last_noun = last_noun.split('/')[1] #Taking only the FIRST TL option
 
                         tags = lexical_unit.readings[0][0][1]
 
