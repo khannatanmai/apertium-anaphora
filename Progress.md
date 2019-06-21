@@ -5,47 +5,35 @@
 * Read the Documentation fully
 * Went through code for apertium core (pretransfer, transfer, tagger, etc.)
 * Flowchart of the proposed system
-
-== Ongoing Work ==
 * Understand the Apertium pipeline fully
 * Modify and Understand individual files
 * Get familiar with the files that I need to modify
-* Write Pseudocode for identifying Salience Factors
-* '''Study the EuroParl corpus''' and see which anaphors the method will be able to resolve on paper
-* Explore Constraint Grammar and use it if it proves to be beneficial
-
-== Work Plan ==
-
-'''Community Bonding Period''' (May 6 - May 27)
 
 * Formalise the problem, limit the scope of anaphora resolution (To Anaphora needed for MT)
-
-'''Week 1''' (May 27)
-* Automatic Annotation of anaphora for evaluation (EuroParl Corpus)
-* Implement a preliminary scoring system for antecedent indicators [work for Spanish-English and Catalan-English for now]
-* Decide on a definite context window
-
-'''Week 2''' (June 3)
+* Implement a preliminary scoring system for antecedent indicators
 * Implement Basic Anaphora for Possessive Pronouns in C++
 * Create a transfer-pattern-like file as a way to mark possible NPs as antecedents.
 * Implement transfer rules for Possessive Pronouns
 * A basic prototype ready
 * TEST the prototype with the pipeline
 
-'''Week 3''' (June 10)
 
+== Ongoing Work ==
+
+* Write Pseudocode for identifying Salience Factors
+* '''Study the EuroParl corpus''' and see which anaphors the method will be able to resolve on paper
+* Explore Constraint Grammar and use it if it proves to be beneficial
 * Implement Basic Anaphora for Reflexive Pronouns (On Verbs) [For Spanish and Catalan]
 * Implement Basic Anaphora for Zero Pronouns (On Verbs) [For Spanish and Catalan]
 * Implement transfer rules for the above
-* TEST the system extensively
-* Document the outline
+
+== Work Plan ==
 
 '''Week 4''' (June 17)
 * Implement the system to work out all possible antecedents 
 * Add ability to give antecedents a score
-* TEST basic sentences with single antecedents, Test the pipeline
-* Test and Evaluate for Possessive, Reflexive, Zero Pronouns in Spa-Eng pair
-* Test and Evaluate for Possessive, Reflexive, Zero Pronouns in Cat-Eng pair
+* TEST the system extensively
+* Document the outline
 
 === Deliverable #1: Anaphora Resolution for single antecedents, with transfer rules [The full pipeline] ===
 
