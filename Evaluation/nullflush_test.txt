@@ -1,0 +1,13 @@
+cat <(echo -e "the king of Georgia would like his breakfast[][\n]\0His name was Robert Paulson[][\n]\0the girl is sitting on her chair[][\n]\0") /dev/stdin | lt-proc eng-spa.automorf.bin -z | apertium-tagger -g -z $2 eng-spa.prob | apertium-pretransfer -z | lt-proc -b -z eng-spa.autobil.bin | lrx-proc -m -z eng-spa.autolex.bin | ../anaphora/anaphora_v
+
+Output (without Null Flush):
+^the<det><def><sp>/el<det><def><GD><ND>/$ ^king<n><sg>/rey<n><m><sg>/$ ^of<pr>/de<pr>/$ ^Georgia<np><loc><sg>/Georgia<np><loc><f><sg>/$ ^would<vaux><inf>//$ ^like<vblex><inf>/gustar<vblex><inf>/rey<n><m><sg>$ ^his<det><pos><sp>/suyo<det><pos><mf><ND>/rey<n><m><sg>$ ^breakfast<n><sg>/almuerzo<n><m><sg>/$[][
+]^His<det><pos><sp>/Suyo<det><pos><mf><ND>/almuerzo<n><m><sg>$ ^name<n><sg>/nombre<n><m><sg>/$ ^be<vbser><past><p3><sg>/ser<vbser><past><p3><sg>/nombre<n><m><sg>$ ^Robert<np><ant><m><sg>/Robert<np><ant><m><sg>/$ ^*Paulson/*Paulson/$[][
+]^the<det><def><sp>/el<det><def><GD><ND>/$ ^girl<n><sg>/chico<n><f><sg>/$ ^be<vbser><pri><p3><sg>/ser<vbser><pri><p3><sg>/chico<n><f><sg>$ ^sit<vblex><ger>/sentar<vblex><ger>/chico<n><f><sg>$ ^on<pr>/en<pr>/$ ^her<det><pos><sp>/suyo<det><pos><mf><ND>/chico<n><f><sg>$ ^chair<n><sg>/silla<n><f><sg>/cátedra<n><f><sg>/presidencia<n><f><sg>/$[][
+
+cat <(echo -e "the king of Georgia would like his breakfast[][\n]\0His name was Robert Paulson[][\n]\0the girl is sitting on her chair[][\n]\0") /dev/stdin | lt-proc eng-spa.automorf.bin -z | apertium-tagger -g -z $2 eng-spa.prob | apertium-pretransfer -z | lt-proc -b -z eng-spa.autobil.bin | lrx-proc -m -z eng-spa.autolex.bin | ../anaphora/anaphora_z -z
+
+Output (with Null Flush):
+^the<det><def><sp>/el<det><def><GD><ND>/$ ^king<n><sg>/rey<n><m><sg>/$ ^of<pr>/de<pr>/$ ^Georgia<np><loc><sg>/Georgia<np><loc><f><sg>/$ ^would<vaux><inf>//$ ^like<vblex><inf>/gustar<vblex><inf>/rey<n><m><sg>$ ^his<det><pos><sp>/suyo<det><pos><mf><ND>/rey<n><m><sg>$ ^breakfast<n><sg>/almuerzo<n><m><sg>/$[][
+]^His<det><pos><sp>/Suyo<det><pos><mf><ND>/$ ^name<n><sg>/nombre<n><m><sg>/$ ^be<vbser><past><p3><sg>/ser<vbser><past><p3><sg>/nombre<n><m><sg>$ ^Robert<np><ant><m><sg>/Robert<np><ant><m><sg>/$ ^*Paulson/*Paulson/$[][
+]^the<det><def><sp>/el<det><def><GD><ND>/$ ^girl<n><sg>/chico<n><f><sg>/$ ^be<vbser><pri><p3><sg>/ser<vbser><pri><p3><sg>/chico<n><f><sg>$ ^sit<vblex><ger>/sentar<vblex><ger>/chico<n><f><sg>$ ^on<pr>/en<pr>/$ ^her<det><pos><sp>/suyo<det><pos><mf><ND>/chico<n><f><sg>$ ^chair<n><sg>/silla<n><f><sg>/cátedra<n><f><sg>/presidencia<n><f><sg>/$[][
