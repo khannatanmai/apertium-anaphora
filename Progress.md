@@ -17,23 +17,19 @@
 * A basic prototype ready
 * TEST the prototype with the pipeline
 
+* '''Study the EuroParl corpus''' and see which anaphors the method will be able to resolve on paper
+* Implement Basic Anaphora for Reflexive Pronouns (On Verbs) [For Spanish and Catalan]
+* Implement Basic Anaphora for Zero Pronouns (On Verbs) [For Spanish and Catalan]
+
 
 == Ongoing Work ==
 
 * Write Pseudocode for identifying Salience Factors
-* '''Study the EuroParl corpus''' and see which anaphors the method will be able to resolve on paper
 * Explore Constraint Grammar and use it if it proves to be beneficial
-* Implement Basic Anaphora for Reflexive Pronouns (On Verbs) [For Spanish and Catalan]
-* Implement Basic Anaphora for Zero Pronouns (On Verbs) [For Spanish and Catalan]
-* Implement transfer rules for the above
+* Transfer rules for verbs to add pronouns
+* Add ability to give antecedents a score
 
 == Work Plan ==
-
-'''Week 4''' (June 17)
-* Implement the system to work out all possible antecedents 
-* Add ability to give antecedents a score
-* TEST the system extensively
-* Document the outline
 
 === Deliverable #1: Anaphora Resolution for single antecedents, with transfer rules [The full pipeline] ===
 
