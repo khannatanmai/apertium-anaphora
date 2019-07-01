@@ -3,14 +3,14 @@
 
 4: comida<n><f><sg> : -1
 
-7: chico<n><m><sg> : -1
+7: chico<n><m><sg> : 0
 
 11: escuela<n><f><sg> : -1
 
-14: silla<n><f><sg> : 0
+14: silla<n><f><sg> : 1
 
-19: agua<n><f><sg> : 1
+19: agua<n><f><sg> : 2
 
-24: persona<n><f><pl> : 2
+24: persona<n><f><pl> : 3
 person<n><pl>$ ^habitación<n><f><sg>/room<n><sg>/$^.<sent>/.<sent>/$^.<sent>/.<sent>/$[][
 ]
