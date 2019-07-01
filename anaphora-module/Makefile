@@ -2,8 +2,8 @@
 
 PROGNAME = anaphora
 
-$(PROGNAME): parse_biltrans.cc anaphora.cc
-	g++ -o $(PROGNAME) parse_biltrans.cc anaphora.cc
+$(PROGNAME): parse_biltrans.cc score.cc anaphora.cc
+	g++ -o $(PROGNAME) parse_biltrans.cc score.cc anaphora.cc
 
 clean:
 	rm $(PROGNAME)
