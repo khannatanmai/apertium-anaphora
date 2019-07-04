@@ -19,6 +19,18 @@ We only keep the context limited to 3 sentences before the pronoun.
 Agreement Filters:
 First we remove antecedents from the list which don't agree with the pronoun (gender and number)
 
+Flow:
+Go through queue in reverse
+Go through each sentence left to right
+When reach a noun, check agreement, if no, continue to next word
+If yes,
+apply indicators one by one
+With final score, add to final antecedent list
+
+Once done,
+Go through final antecedent list and see highest scored one
+
+
 
 When a pronoun
 
