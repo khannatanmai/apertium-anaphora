@@ -36,3 +36,13 @@ When a pronoun
 
 PROBABLY NEED A DESTRUCTOR FOR SCORE CLASS
 
+SCORE:
+Referential Distance
++2 (Current Sentence)
++1 (Previous Sentence)
++0 (Previous to Previous Sentence)
+-1 (so on..)
+
+First NP
++1 for first NP of each sentence
+
