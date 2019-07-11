@@ -18,11 +18,15 @@
 
 	<section-markables>
 		<markable n="NP">
-		<pattern>
-			<pattern-item n="det"/>
-			<pattern-item n="adj"/>
-			<pattern-item n="nom" head="t"/>
-		</pattern>
+			<pattern>
+				<pattern-item n="det"/>
+				<pattern-item n="adj"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="det"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
 		</markable>
 	</section-markables>
 	
