@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- nxml -*- -->
+<anaphora>
+	
+	<section-def-cats>
+		<def-cat n="det">
+			<cat-item tags="det.*"/>
+			<cat-item tags="det.pos.*"/>
+		</def-cat>
+
+		<def-cat n="adj">
+			<cat-item tags="adj.*"/>
+		</def-cat>
+
+		<def-cat n="nom">
+			<cat-item tags="n.*"/>
+		</def-cat>
+	</section-def-cats>
+
+	<section-markables>
+		<markable n="NP">
+		<pattern>
+			<pattern-item n="det"/>
+			<pattern-item n="adj"/>
+			<pattern-item n="nom" head="t"/>
+		</pattern>
+		</markable>
+	</section-markables>
+	
+</anaphora>
