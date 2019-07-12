@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?> <!-- -*- nxml -*- -->
-<anaphora>
+<ref>
 	
 	<section-parameters>
 		
-		<def-anaphor>
-			<anaphor-item tags="det.pos.*"/>
-			<anaphor-item tags="prn.*"/>
-		</def-anaphor>
+		<def-parameter n="anaphor">
+			<parameter-item tags="det.pos.*"/>
+			<parameter-item tags="prn.*"/>
+		</def-parameter>
 
-		<def-antecedent>
-			<antecedent-item tags="n.*"/>
-		</def-antecedent>
+		<def-parameter n="antecedent">
+			<parameter-item tags="n.*"/>
+		</def-parameter>
 
 	</section-parameters>
 
@@ -47,4 +47,4 @@
 		
 	</section-markables>
 	
-</anaphora>
+</ref>
