@@ -2,16 +2,16 @@
 <ref>
 	
 	<section-parameters>
-		
-		<def-parameter n="anaphor">
-			<parameter-item tags="det.pos.*"/>
+		<anaphor>
+			<parameter-item tags="det.pos"/>
 			<parameter-item tags="prn.*"/>
-		</def-parameter>
-
-		<def-parameter n="antecedent">
+		</anaphor>
+		<antecedent>
 			<parameter-item tags="n.*"/>
-		</def-parameter>
-
+		</antecedent>
+		<delimiter>
+			<parameter-item tags="sent"/>
+		</delimiter>
 	</section-parameters>
 
 	<section-def-cats>
@@ -27,8 +27,12 @@
 
 		<def-cat n="nom">
 			<cat-item tags="n.*"/>
-		
 		</def-cat>
+
+		<def-cat n="prep">
+      		<cat-item tags="pr"/>
+    	</def-cat>
+
 	</section-def-cats>
 
 	<section-markables>
@@ -42,6 +46,18 @@
 			<pattern>
 				<pattern-item n="det"/>
 				<pattern-item n="nom" head="t"/>
+			</pattern>
+		</markable>
+
+		<markable n="PP">
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="det"/>
+				<pattern-item n="nom"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="nom"/>
 			</pattern>
 		</markable>
 		
