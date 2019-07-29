@@ -59,6 +59,8 @@
 				<pattern-item n="prep"/>
 				<pattern-item n="nom"/>
 			</pattern>
+			
+			<score n="-1"/>
 		</markable>
 		
 	</section-markables>
