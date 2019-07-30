@@ -59,8 +59,8 @@
 				<pattern-item n="prep"/>
 				<pattern-item n="nom"/>
 			</pattern>
-			
-			<score n="-1"/>
+
+			<score n="-1"/> <!-- This gives a -1 score to any antecedent that is part of a PP -->
 		</markable>
 		
 	</section-markables>
