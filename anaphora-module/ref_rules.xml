@@ -33,6 +33,10 @@
       		<cat-item tags="pr"/>
     	</def-cat>
 
+    	<def-cat n="ind">
+    		<cat-item tags="ind"/>
+    	</def-cat>
+
 	</section-def-cats>
 
 	<section-markables>
@@ -61,6 +65,15 @@
 			</pattern>
 
 			<score n="-1"/> <!-- This gives a -1 score to any antecedent that is part of a PP -->
+		</markable>
+
+		<markable n="IP">
+			<pattern>
+				<pattern-item n="ind"/>
+				<pattern-item n="nom"/>
+			</pattern>
+
+			<score n="-1"/>
 		</markable>
 		
 	</section-markables>
