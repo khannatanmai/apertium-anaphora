@@ -1,0 +1,4 @@
+^uno<det><ind><m><sg>/a<det><ind><sg>$ ^*nino/*nino$[
+]^uno<det><ind><f><sg>/a<det><ind><sg>$ ^chica<n><f><sg>/girl<n><sg>$[
+]^el<det><def><m><sg>/the<det><def><m><sg>$ ^chico<n><m><sg>/boy<n><sg>$[
+]^el<det><def><f><sg>/the<det><def><f><sg>$ ^mujer<n><f><sg>/woman<n><sg>$^el seu<det><pos><m><sg>/his<det><pos><m><sg>$^.<sent>/.<sent>$[][
