@@ -8,6 +8,7 @@
 		</anaphor>
 		<antecedent>
 			<parameter-item has-tags="n"/>
+			<parameter-item has-tags="np"/>
 		</antecedent>
 		<delimiter>
 			<parameter-item has-tags="sent"/>
@@ -29,39 +30,95 @@
 			<cat-item has-tags="n"/>
 		</def-cat>
 
-		<def-cat n="prep">
-      		<cat-item has-tags="pr"/>
-    	</def-cat>
+		<def-cat n="np">
+			<cat-item has-tags="np"/>
+		</def-cat>
 
-    	<def-cat n="ind">
-    		<cat-item has-tags="ind"/>
+		<def-cat n="prep">
+      			<cat-item has-tags="pr"/>
+ 	   	</def-cat>
+
+ 	   	<def-cat n="ind">
+    			<cat-item has-tags="ind"/>
     	</def-cat>
 
 	</section-def-cats>
 
 	<section-markables>
-		
-		<markable n="NP">
-			<pattern>
-				<pattern-item n="det"/>
-				<pattern-item n="adj"/>
-				<pattern-item n="nom" head="t"/>
-			</pattern>
-			<pattern>
-				<pattern-item n="det"/>
-				<pattern-item n="nom" head="t"/>
-			</pattern>
-		</markable>
 
 		<markable n="PP">
 			<pattern>
 				<pattern-item n="prep"/>
 				<pattern-item n="det"/>
-				<pattern-item n="nom"/>
+				<pattern-item n="nom" head="t"/>
 			</pattern>
 			<pattern>
 				<pattern-item n="prep"/>
-				<pattern-item n="nom"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="det"/>
+				<pattern-item n="adj"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="det"/>
+				<pattern-item n="adv"/>
+				<pattern-item n="adj"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="det"/>
+				<pattern-item n="preadv"/>
+				<pattern-item n="adj"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="predet"/>
+				<pattern-item n="det"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="predet"/>
+				<pattern-item n="det"/>
+				<pattern-item n="adj"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="predet"/>
+				<pattern-item n="det"/>
+				<pattern-item n="adv"/>
+				<pattern-item n="adj"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="predet"/>
+				<pattern-item n="det"/>
+				<pattern-item n="preadv"/>
+				<pattern-item n="adj"/>
+				<pattern-item n="nom" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="np" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="det"/>
+				<pattern-item n="np" head="t"/>
+			</pattern>
+			<pattern>
+				<pattern-item n="prep"/>
+				<pattern-item n="predet"/>
+				<pattern-item n="det"/>
+				<pattern-item n="np" head="t"/>
 			</pattern>
 
 			<score n="-1"/> <!-- This gives a -1 score to any antecedent that is part of a PP -->
@@ -72,10 +129,23 @@
 				<pattern-item n="ind"/>
 				<pattern-item n="nom"/>
 			</pattern>
+			<pattern>
+				<pattern-item n="ind"/>
+				<pattern-item n="adj"/>
+				<pattern-item n="nom"/>
+			</pattern>
 
 			<score n="-1"/> <!-- This gives a -1 score to any antecedent that is part of a Indefinite Noun Phrase -->
 		</markable>
-		
+
+		<markable n="PNP">
+			<pattern>
+				<pattern-item n="np"/>
+			</pattern>
+
+			<score n="1"/> <!-- This gives a +1 score to any antecedent that is part of a Proper Noun -->
+		</markable>
+
 	</section-markables>
 	
 </ref>
