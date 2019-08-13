@@ -8,6 +8,7 @@
 #include<string>
 #include<iostream>
 #include<vector>
+#include<cwchar>
 
 using namespace std;
 
@@ -142,7 +143,13 @@ int main(int argc, char **argv)
 						if(retval == 1)
 						{
 							final_ref = score_module.get_antecedent();
-							wcout << final_ref; //add antecedent to side ref of LU //CHANGE
+							wcout << final_ref;
+							/*
+							int rc = fputws(final_ref, stdout); //add antecedent to side ref of LU
+ 
+    						if (rc == EOF)
+       							perror("fputws()");
+       						*/
 						}
 					}
 
