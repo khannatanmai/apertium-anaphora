@@ -1,3 +1,0 @@
-Speed Comparison
-Python Anaphora Module (500 sentences):	0m0.738s
-C Anaphora Module (500 sentences):		0m0.426s	
