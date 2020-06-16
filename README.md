@@ -2,6 +2,8 @@
 ## Apertium
 ## Google Summer of Code 2019
 
+**This module has been moved to the official apertium organisation's repository. Find it here: https://github.com/apertium/apertium-anaphora**
+
 ### How to Run
 - `cd anaphora-module`
 - `make`
